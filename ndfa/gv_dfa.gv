@@ -1,0 +1,16 @@
+digraph {
+	graph [rankdir=LR]
+	node [shape=circle]
+	"{A}" [label="{A}"]
+	"{A,B}" [label="{A,B}"]
+	"{A,C}" [label="{A,C}"]
+	"{A}" -> "{A,B}" [label=a]
+	"{A}" -> "{A}" [label=b]
+	"{A,B}" -> "{A,B}" [label=a]
+	"{A,B}" -> "{A,C}" [label=b]
+	"{A,C}" -> "{A,B}" [label=a]
+	"{A,C}" -> "{A}" [label=b]
+	BEGIN [label="" shape=none]
+	BEGIN -> "{A}" [label=start]
+	"{A,C}" [label="{A,C}" shape=doublecircle]
+}
